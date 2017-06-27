@@ -2,16 +2,14 @@ package com.api;
 
 public class Gazillion {
 
-    private static int num = 0;
-    private int row, col;
+    private int row;
 
-    public Gazillion(int maxPerRow) {
-        row = num / maxPerRow;
-        col = num % maxPerRow;
-        num++;
+    public Gazillion(int row) {
+        this.row = row;
+        System.out.println("ctor: " + this.row);
     }
 
-    public void report() {
+    public void report(int col) {
         System.out.print(" " + row + col);
     }
 }
